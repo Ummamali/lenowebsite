@@ -1,0 +1,405 @@
+/* This includes styles for home index page */
+header {
+  background: url("../images/header-background.jpg") no-repeat center/cover;
+}
+
+.showcase {
+  --container-padding: 48px;
+  position: relative;
+}
+.showcase::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.showcase .container {
+  min-height: 100vh;
+  padding-top: var(--navbar-height);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.showcase article {
+  max-width: 400px;
+}
+.showcase article h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #eee;
+  line-height: 1.1;
+}
+.showcase article h1 span {
+  color: var(--primary-accent);
+}
+.showcase article p {
+  color: #fff;
+  opacity: 0.7;
+  margin: 16px 0px 24px;
+}
+.showcase article .btn {
+  margin-right: 16px;
+  color: #222;
+}
+.showcase article .btn i {
+  margin-right: 8px;
+}
+.showcase img {
+  max-width: 360px;
+  justify-self: end;
+}
+
+#testimonials {
+  background-color: var(--secondary-dark);
+}
+#testimonials .container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+#testimonials .container .item {
+  max-width: 240px;
+  padding: 10px;
+  text-align: center;
+  color: #eee;
+}
+#testimonials .container .item img {
+  width: 90px;
+  border-radius: 100px;
+}
+#testimonials .container .item p {
+  margin: 20px 0px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#takeaways {
+  background-color: var(--primary-dark);
+}
+#takeaways .artboard {
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 20px;
+  margin-top: 40px;
+}
+#takeaways .artboard .tk {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 250px;
+  justify-self: end;
+}
+#takeaways .artboard .tk h5 {
+  text-align: right;
+  color: #eee;
+}
+#takeaways .artboard .tk p {
+  font-size: 0.85rem;
+  text-align: right;
+  color: #ccc;
+  font-weight: 300;
+  line-height: 1.4;
+}
+#takeaways .artboard .tk i {
+  font-size: 2.2rem;
+  color: var(--primary-accent);
+}
+
+/* ones on the right side */
+#takeaways .artboard .tk:nth-child(odd) {
+  flex-direction: row-reverse;
+  justify-self: start;
+}
+#takeaways .artboard .tk:nth-child(odd) p,
+#takeaways .artboard .tk:nth-child(odd) h5 {
+  text-align: left;
+}
+
+/* the image */
+#takeaways .artboard img {
+  grid-row: 1 / -1;
+  grid-column: 2 / span 1;
+  justify-self: center;
+  width: 100%;
+}
+
+/* Preview section */
+#preview {
+  position: relative;
+  background-color: var(--primary-dark);
+}
+#preview .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: url("../images/video-background.jpg") no-repeat center/cover;
+  opacity: 0.2;
+}
+#preview .items {
+  position: relative;
+}
+
+#preview .video-card {
+  max-width: 700px;
+  height: 400px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #0006, #0006),
+    url("../images/video-frame.jpg") no-repeat center/cover;
+  margin: 40px auto 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#preview .video-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--primary-accent);
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+#preview .video-card button i {
+  position: relative;
+}
+#preview .video-card button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-accent);
+  top: 0px;
+  left: 0px;
+  border-radius: 100%;
+  animation: grow 2s ease infinite;
+}
+#preview .video-card button:hover {
+  color: #fff;
+}
+
+#details {
+  background-color: var(--primary-dark);
+  padding: var(--section-padding-y) 0px;
+}
+#details h2 {
+  color: #eee;
+}
+#details p {
+  color: #ddd;
+  font-weight: 300;
+}
+#details .btn {
+  border-radius: 100px;
+}
+#details .flex-image-article {
+  margin-bottom: var(--section-padding-y);
+}
+
+#details .stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: var(--section-padding-y);
+}
+#details .stats .s-item {
+  text-align: center;
+  max-width: 200px;
+}
+#details .stats .s-item i {
+  font-size: 2rem;
+  color: var(--primary-accent);
+}
+#details .stats .s-item h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 20px;
+}
+#details .stats .s-item p {
+  font-size: 0.8rem;
+  color: #eee;
+}
+
+#screenshots {
+  background-color: var(--secondary-dark);
+}
+#screenshots .shots {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+#download {
+  --flex-image-width: 400px;
+  background: url("../images/download-background.jpg") no-repeat center/cover;
+  padding: calc(2 * var(--section-padding-y)) 0px;
+}
+#download h3 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+#download .btn {
+  margin: 10px 10px;
+}
+
+/* --------------- Responsive ------------------------- */
+
+@media (max-width: 1000px) {
+  .showcase .container {
+    grid-template-columns: 1fr;
+    align-items: initial;
+    align-content: center;
+    justify-items: center;
+  }
+  .showcase article {
+    max-width: 700px;
+    text-align: center;
+  }
+  .showcase article h1 {
+    font-size: 2.4rem;
+  }
+  .showcase article p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .showcase img {
+    justify-self: auto;
+    max-width: 280px;
+  }
+}
+/* ------------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .showcase {
+    --container-padding: 22px;
+  }
+  .showcase article {
+    max-width: none;
+  }
+
+  #testimonials .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  #testimonials .container .item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: none;
+    text-align: left;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  #testimonials .container .item:last-child {
+    border-bottom: none;
+  }
+  #testimonials .container .item p {
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+
+  #takeaways .artboard {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+  #takeaways .artboard img {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    max-width: 180px;
+  }
+
+  #screenshots .shots {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* -------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  #takeaways .artboard {
+    grid-template-columns: 1fr;
+  }
+  #takeaways .artboard .tk {
+    max-width: 400px;
+  }
+  #takeaways .artboard .tk:nth-child(odd),
+  #takeaways .artboard .tk:nth-child(even) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-self: center;
+    gap: 10px;
+  }
+  #takeaways .artboard .tk h5 {
+    text-align: center !important;
+    margin-bottom: 10px;
+  }
+  #takeaways .artboard .tk p {
+    text-align: center !important;
+  }
+
+  #screenshots .shots {
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+  }
+}
+/* ------------------------------------------------- */
+@media (max-width: 450px) {
+  .showcase article h1 {
+    font-size: 1.8rem;
+  }
+  .showcase a.btn {
+    display: block;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+  .showcase img {
+    max-width: 200px;
+  }
+
+  #testimonials .container .item {
+    flex-direction: column;
+    text-align: center;
+  }
+  #testimonials .container .item img {
+    max-width: 70px;
+  }
+
+  #preview .video-card {
+    height: 300px;
+  }
+
+  #screenshots .shots {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* --------------- animations ------------------- */
+@keyframes grow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

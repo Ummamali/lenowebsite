@@ -1,0 +1,168 @@
+/* This stylesheet if for navbar and footer */
+
+/* ---------------- Navbar -------------------- */
+/* Navbar */
+.top-bar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  transition: background-color 300ms ease;
+}
+/* When the top navbar shoud be independent of the header and be fixed to the top of the screen */
+.top-bar.header-independent {
+  height: var(--navbar-height);
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+}
+.scrolling {
+  background-color: #0008;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.top-bar .logo {
+  max-width: 70px;
+}
+.top-bar nav ul {
+  display: flex;
+}
+.top-bar nav ul a {
+  color: #fff;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: background-color 160ms ease, color 160ms ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--primary-accent);
+  }
+
+  i {
+    font-size: 1.1rem;
+  }
+}
+.top-bar nav ul a:has(i):hover {
+  color: var(--primary-accent);
+  background-color: transparent;
+}
+#hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ------------- footer --------------- */
+footer {
+  background-color: var(--primary-dark);
+  padding: 50px 0px;
+  box-shadow: 0px -1px 5px 0px var(--primary-accent);
+}
+footer .container {
+  display: flex;
+  gap: 70px;
+}
+footer .about {
+  max-width: 300px;
+  color: #eee;
+}
+footer h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+footer .about p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  font-weight: 300;
+  line-height: 1.4;
+}
+footer .links {
+  color: #fff;
+}
+footer .links a {
+  color: #ddd;
+  font-size: 0.8rem;
+}
+footer .links a:hover,
+footer .social a:hover {
+  color: var(--primary-accent);
+}
+footer .social {
+  margin-left: auto;
+  align-self: center;
+  display: flex;
+  gap: 20px;
+}
+footer .social a {
+  color: #aaa;
+  font-size: 2rem;
+}
+/* ----------------- Media Queries ------------------------------ */
+
+@media (max-width: 768px) {
+  /* >>>>>>>>> Adjusting the navbar */
+  body.no-scroll-y {
+    overflow-y: hidden;
+  }
+  #hamburger {
+    display: block;
+  }
+
+  .top-bar nav {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0px;
+    z-index: 100;
+    transform: translateX(100%);
+    padding: 50px 24px;
+    width: 100vw;
+    height: calc(100vh - var(--navbar-height));
+    background-color: #222;
+    transition: transform 300ms ease;
+  }
+  .top-bar nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .top-bar nav ul a {
+    width: 100%;
+  }
+
+  #navbar.nav-active,
+  #navbar.nav-active.scrolling {
+    background-color: var(--secondary-dark);
+  }
+  #navbar.nav-active .main-nav {
+    transform: translateX(0%);
+  }
+
+  /* footer */
+  footer .container {
+    flex-direction: column;
+  }
+  footer .about {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .container {
+    align-items: center;
+    text-align: center;
+  }
+}
+footer .social {
+  margin-left: 0px;
+}

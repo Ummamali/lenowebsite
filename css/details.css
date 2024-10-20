@@ -1,0 +1,169 @@
+/* This stylesheet is only for details.html page */
+
+header {
+  background: url("../images/download-background.jpg") no-repeat center/cover;
+  padding-top: var(--navbar-height);
+  position: relative;
+}
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+header .headline {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #fff;
+  position: relative;
+}
+
+#pricing {
+  background-color: var(--primary-dark);
+}
+#pricing .pricing-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+#pricing .p-card {
+  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 60px 40px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#pricing .p-card h3 {
+  font-size: 1rem;
+  color: #dddd;
+}
+#pricing .p-card h5 {
+  font-size: 3rem;
+  color: var(--primary-accent);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+#pricing .p-card i {
+  color: var(--primary-accent);
+  margin-right: 10px;
+}
+#pricing .p-card ul {
+  color: #ddd;
+  font-size: 0.85rem;
+  margin-bottom: 50px;
+}
+#pricing .p-card ul li {
+  margin: 10px 0px;
+  width: 100%;
+  text-align: left;
+}
+#pricing .p-card .btn {
+  display: block;
+  width: 100%;
+}
+#pricing .p-card .btn:hover {
+  background-color: transparent;
+}
+
+#pricing .terms {
+  --container-width: 1000px;
+  font-size: 0.8rem;
+  margin-top: 40px;
+}
+#pricing .terms p {
+  color: #fff;
+  opacity: 0.3;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+
+#features {
+  background-color: var(--secondary-dark);
+}
+#features .f-contain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+#features .f-contain .f-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
+  border-radius: 4px;
+}
+#features .f-contain .f-card .text {
+  flex: 1;
+}
+#features .f-contain .f-card i {
+  font-size: 2.5rem;
+  color: var(--primary-accent);
+  opacity: 0.8;
+}
+#features .f-contain .f-card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+#features .f-contain .f-card p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+footer {
+  box-shadow: none;
+}
+
+/* ---------------------- media queries --------------------- */
+@media (max-width: 1100px) {
+  #pricing .pricing-contain .p-card {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  #pricing .pricing-contain {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #pricing .pricing-contain .p-card {
+    max-width: none;
+  }
+  #pricing .pricing-contain .p-card li {
+    text-align: center;
+  }
+  #pricing .pricing-contain .p-card i {
+    display: none;
+  }
+
+  #features .f-contain {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  #pricing .pricing-contain .p-card {
+    padding: 40px 30px;
+  }
+  #pricing .pricing-contain .p-card li {
+    text-align: left;
+  }
+  #pricing .pricing-contain .p-card i {
+    display: inline;
+  }
+
+  #features .f-contain .f-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}

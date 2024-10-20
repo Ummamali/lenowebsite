@@ -140,7 +140,7 @@ header {
   top: 0px;
   left: 0px;
   background: url("../images/video-background.jpg") no-repeat center/cover;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 #preview .items {
   position: relative;

@@ -1,7 +1,10 @@
-# Leno  (Personal Health & Productivity Companion)  
+# Leno 
+#### Personal Health & Productivity Companion  
 
 ## Description  
 Leno is a web-based health and productivity app designed to help users stay on top of their wellness and productivity goals. It offers an intuitive and simple interface with two main pages: the homepage, which provides an overview of your health and productivity metrics, and the details page, which dives deeper into specific goals and progress tracking. The app aims to improve daily routines by offering helpful insights, tracking progress, and offering productivity tips. Leno is built to be user-friendly and easily accessible, ensuring you can stay motivated and focused on achieving your personal goals. This is a marketing website for the application.
+
+<img src="./preview.jpg" alt="Preview Image"/>
 
 ## Pages
 - **Homepage**  

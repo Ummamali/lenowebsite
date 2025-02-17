@@ -13,3 +13,9 @@ Leno is a web-based health and productivity app designed to help users stay on t
   - Offers in-depth progress tracking for various health and productivity goals.  
   - Allows users to set and edit goals for health, fitness, and productivity.  
   - Provides charts, stats, and visual aids for progress monitoring.  
+
+## Technologies  
+
+🚀 **HTML5** – The backbone of Leno's clean, semantic structure, providing a solid foundation for the user interface.  
+🎨 **CSS3** – Crafting a visually stunning, responsive, and modern design to ensure the app looks great on all devices.  
+⚡ **JavaScript** – Bringing interactivity to life, powering dynamic content updates, and ensuring smooth user experiences throughout the app.  
